@@ -1,6 +1,9 @@
 {
-    "AWSEBDockerrunVersion": 2,
+    "AWSEBDockerrunVersion": 3,
     "containerDefinitions":[
-
+        {
+            "name":"client",
+            "image":""
+        }
     ]
 }
