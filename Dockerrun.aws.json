@@ -3,25 +3,25 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "germinglin/complex-client",
+      "image": "germinglin/multi-client-10-14",
       "host": "client",
       "essential": false
     },
     {
       "name": "server",
-      "image": "germinglin/complex-api",
+      "image": "germinglin/multi-api-10-14",
       "hostname": "api",
       "essential": false
     },
     {
       "name": "worker",
-      "image": "germinglin/complex-worker",
+      "image": "germinglin/multi-worker-10-14",
       "hostname": "worker",
       "essential": false
     },
     {
       "name": "nginx",
-      "image": "germinglin/complex-nginx",
+      "image": "germinglin/multi-nginx-10-14",
       "hostname": "nginx",
       "essential": true,
       "portMappings": [
