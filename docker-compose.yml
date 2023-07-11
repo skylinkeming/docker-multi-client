@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "germinglin/complex-client"
+    image: "germinglin/multi-client-10-15"
     mem_limit: 128m
     hostname: client
   server:
-    image: "germinglin/complex-server"
+    image: "germinglin/multi-server-10-15"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "germinglin/complex-worker"
+    image: "germinglin/multi-worker-10-15"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "germinglin/complex-nginx"
+    image: "germinglin/multi-nginx-10-15"
     mem_limit: 128m
     hostname: nginx
     ports:
