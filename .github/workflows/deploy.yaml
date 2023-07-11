@@ -13,15 +13,15 @@ jobs:
       - run: docker build -t germinglin/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true germinglin/react-test npm test
  
-      - run: docker build -t germinglin/multi-client-10-14 ./client
-      - run: docker build -t germinglin/multi-nginx-10-14 ./nginx
-      - run: docker build -t germinglin/multi-server-10-14 ./server
-      - run: docker build -t germinglin/multi-worker-10-14 ./worker
+      - run: docker build -t germinglin/multi-client-10-15 ./client
+      - run: docker build -t germinglin/multi-nginx-10-15 ./nginx
+      - run: docker build -t germinglin/multi-server-10-15 ./server
+      - run: docker build -t germinglin/multi-worker-10-15 ./worker
  
-      - run: docker push germinglin/multi-client-10-14
-      - run: docker push germinglin/multi-nginx-10-14
-      - run: docker push germinglin/multi-server-10-14
-      - run: docker push germinglin/multi-worker-10-14
+      - run: docker push germinglin/multi-client-10-15
+      - run: docker push germinglin/multi-nginx-10-15
+      - run: docker push germinglin/multi-server-10-15
+      - run: docker push germinglin/multi-worker-10-15
  
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
