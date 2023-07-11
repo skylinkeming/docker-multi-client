@@ -9,7 +9,7 @@
     },
     {
       "name": "server",
-      "image": "germinglin/multi-api-10-14",
+      "image": "germinglin/multi-server-10-14",
       "hostname": "api",
       "essential": false
     },
